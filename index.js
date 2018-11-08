@@ -1,9 +1,9 @@
 const fs = require('fs');
 
-const fieldsToIgnore = ["NODE_CONFIG_DIR"];
+const fieldsToIgnoreByDefault = ["NODE_CONFIG_DIR"];
 
 const methods = {
-    setUpEnvironmentVariables: function (environmentVariableFilePath) {
+    setUpEnvironmentVariables: function (environmentVariableFilePath, fieldsToIgnore = fieldsToIgnoreByDefault) {
         if (!fs.existsSync(environmentVariableFilePath)) {
             throw new Error(`Could not find configuration file: ${environmentVariableFilePath}`);
         }
