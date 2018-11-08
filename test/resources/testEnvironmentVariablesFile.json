@@ -1,0 +1,5 @@
+{
+    "TEST_VARIABLE": "testValue",
+    "BASE_URL": "testBaseUrl",
+    "NODE_CONFIG_DIR": "ignoreMe"
+}
