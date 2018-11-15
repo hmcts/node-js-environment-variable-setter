@@ -1,6 +1,6 @@
 {
   "name": "bringenvironmentvariablesfromapp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module to set up local process to point to a different environment.",
   "main": "index.js",
   "scripts": {
