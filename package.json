@@ -1,6 +1,6 @@
 {
-  "name": "bringenvironmentvariablesfromapp",
-  "version": "1.0.2",
+  "name": "@hmcts/environment-variable-setter",
+  "version": "1.0.0",
   "description": "Module to set up local process to point to a different environment.",
   "main": "index.js",
   "scripts": {
