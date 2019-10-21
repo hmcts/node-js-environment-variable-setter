@@ -32,9 +32,9 @@ jobs:
         with:
           node-version: 10
           registry-url: https://registry.npmjs.org/
-      - run: yarn publish
+      - run: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc && yarn publish --non-interactive
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish-gpr:
     if: startsWith(github.ref, 'refs/tags')
@@ -47,6 +47,6 @@ jobs:
           node-version: 10
           registry-url: https://npm.pkg.github.com/
           scope: '@hmcts'
-      - run: yarn publish
+      - run: yarn publish --non-interactive
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
